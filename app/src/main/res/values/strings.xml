@@ -1,0 +1,56 @@
+<resources>
+    <string name="app_name">Tralova</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="menu_tools">Tools</string>
+    <string name="menu_share">Share</string>
+    <string name="menu_send">Send</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="title_activity_login">Sign in</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+    <string name="menu_Care">Healt Care</string>
+    <string name="menu_CreateTask">Crate Task</string>
+    <string name="menu_Article">Article</string>
+    <string name="menu_group">Group Add</string>
+    <string name="Logout">Logout</string>
+    <string name="name_wisatawan">Nama Wisatawan</string>
+    <string name="detail_healtycare">Riwayat penyakit</string>
+    <string name="daerah_asal">Asal Daerah</string>
+    <string name="Umur_wisatawan">Umur</string>
+    <string name="Nama">Nama Lengkap</string>
+    <string name="Email">Email Address</string>
+
+    <string name="DefaultPenyakit">Flu<br />Batuk<br />Demam<br />Mudah Capek</string>
+    <string name="DefaultObat">Paramex <br /> parasetamol</string>
+
+    <string-array name="labels_array">
+        <item>Pilih</item>
+        <item>Umroh 2018</item>
+        <item>Reuni ke Sabang </item>
+        <item>Touring Sinabung</item>
+    </string-array>
+
+    <string-array name="repeat_condition">
+        <item>Only once</item>
+        <item>Daily</item>
+        <item>Weekday</item>
+        <item>Weekend</item>
+        <item>Monthly</item>
+        <item>Yearly</item>
+    </string-array>
+</resources>

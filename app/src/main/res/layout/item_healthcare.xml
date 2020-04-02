@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/healtycare_list"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    android:layout_marginTop="2dp"
+    android:orientation="horizontal"
+    android:padding="16dp"
+    android:background="@drawable/circle_list">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/item_pp_wisatawan"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        tools:src="@android:color/darker_gray" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_centerVertical="true"
+        android:layout_toEndOf="@+id/item_pp_wisatawan"
+        android:layout_toRightOf="@+id/item_pp_wisatawan"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_name_wisatawan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            tools:text="@string/name_wisatawan" />
+
+        <TextView
+            android:id="@+id/tv_asal_daerah"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textSize="12sp"
+            tools:text="@string/daerah_asal" />
+
+        <TextView
+            android:id="@+id/tv_umur"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textSize="12sp"
+            tools:text="@string/Umur_wisatawan" />
+
+    </LinearLayout>
+
+</RelativeLayout>

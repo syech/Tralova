@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:padding="5dp"
+    android:id="@+id/reminder"
+    tools:context=".ui.slideshow.AddRemindActivity">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:textColor="@color/quantum_bluegrey500"
+            android:text="What is to be done ?"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="20dp">
+            <ImageView
+                android:id="@+id/remindMic"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="3dp"
+                android:src="@drawable/ic_action_mic"/>
+            <EditText
+                android:id="@+id/remind"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/remindMic"
+                android:hint="Remind me to.."
+                android:textSize="20dp"/>
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:textColor="@color/quantum_bluegrey500"
+            android:text="Deskription"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="20dp">
+
+            <ImageView
+                android:id="@+id/summaryMic"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginRight="5dp"
+                android:src="@drawable/ic_action_mic"/>
+            <EditText
+                android:id="@+id/summary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/summaryMic"
+                android:hint="Write short summary"
+                android:textSize="20dp"/>
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:textColor="@color/quantum_bluegrey500"
+            android:text="Due Date"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="15dp">
+
+            <ImageView
+                android:id="@+id/dateCal"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginRight="5dp"
+                android:src="@drawable/ic_action_calender"/>
+            <TextView
+                android:id="@+id/tvDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/dateCal"
+                android:onClick="setDate"
+                android:textSize="20dp"
+                android:layout_marginTop="5dp"
+                android:background="@android:color/transparent"
+                android:hint="Set remind date"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="20dp">
+
+            <ImageView
+                android:id="@+id/timeAlaram"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginRight="5dp"
+                android:src="@drawable/ic_action_alarm"/>
+            <TextView
+                android:id="@+id/tvTime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/timeAlaram"
+                android:onClick="setTime"
+                android:textSize="20dp"
+                android:layout_marginTop="5dp"
+                android:background="@android:color/transparent"
+                android:hint="Set remind time"/>
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:textColor="@color/quantum_bluegrey500"
+            android:text="Repeat"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp">
+
+            <ImageView
+                android:id="@+id/eventarow"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_action_event"
+                android:layout_marginTop="2.5dp"/>
+            <Spinner
+                android:id="@+id/spRepeat"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_toRightOf="@+id/eventarow"
+                android:textSize="20sp"/>
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:orientation="horizontal"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="30dp"
+            android:layout_marginHorizontal="5dp">
+
+            <Button
+                android:id="@+id/btn_cancel"
+                android:layout_width="120dp"
+                android:layout_gravity="center_horizontal|center_vertical|center"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:onClick="cancelTodo"
+                app:strokeWidth="2dp"
+                android:layout_marginRight="10dp"
+                android:layout_alignParentBottom="true"
+                android:text="Cancel"/>
+            <Button
+                android:id="@+id/btn_save"
+                android:layout_width="120dp"
+                android:layout_gravity="right"
+                android:onClick="saveTodo"
+                android:layout_alignParentBottom="true"
+                android:layout_toEndOf="@+id/btn_cancel"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="Save"/>
+
+        </RelativeLayout>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</ScrollView>

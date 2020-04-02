@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.tralova">
+    <!--
+         The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
+         Google Maps Android API v2, but you must specify either coarse or fine
+         location permissions for the 'MyLocation' functionality.
+    -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <uses-feature android:name="android.hardware.camera2.full" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name=".ui.slideshow.AddRemindActivity"
+            android:label="New Task"></activity>
+        <activity android:name=".ui.chat.InfoGroupActivity"
+            android:label="Info Group"
+            android:parentActivityName=".ui.chat.ChatGroupActivity"/>
+        <activity android:name=".ui.chat.ChatGroupActivity"
+            android:label="chat Group"
+            android:parentActivityName=".MainActivity"/>
+        <activity
+            android:name=".Profil_Activity"
+            android:label="Profil"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".ui.recomended.Detail_Kuliner"
+            android:label="Rekomendasi Kuliner"
+            android:parentActivityName=".ui.recomended.RecomendedActivity" />
+        <activity
+            android:name=".ui.recomended.DetailWisata"
+            android:label="Recomendasi Wisata"
+            android:parentActivityName=".ui.recomended.RecomendedActivity" />
+        <activity
+            android:name=".ui.recomended.RecomendedActivity"
+            android:label="Rekomendasi"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".ui.tools.DetailArticleActivity"
+            android:label="Detail Article"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".ui.tools.AddArticleActivity"
+            android:label="Add Article"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ui.share.AddGroupActivity"
+            android:label="Add Group"
+            android:parentActivityName=".ui.share.ShareFragment"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ui.gallery.DetailHealthCareActivity"
+            android:label="Deatil Healty Care"
+            android:parentActivityName=".MainActivity" />
+        <activity android:name=".RegisterActivity" />
+        <activity android:name=".LoginActivity" />
+        <!--
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/.
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyCNqQArjDRfFjYrWUKEhzFVKi-c4XHbKMc" />
+
+        <activity
+            android:name=".MapsActivity"
+            android:label="@string/title_activity_maps" />
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
